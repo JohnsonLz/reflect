@@ -1,0 +1,7 @@
+<Configure>
+	<Function name="declation" scale="Init">
+		<Argument>1</Argument>
+	</Function>
+
+	<Bean name="Sharp" reference="Line" />
+</Configure>
