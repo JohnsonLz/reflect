@@ -10,8 +10,8 @@ and tinyxml to save the message
 By the way , I only tested on linux(Ubuntu) and GCC 4.8.4
 
 Install:
-./make to complier
-./make install to install
+./make
+./make install
 
 ./bin/dwarfparser is the tool to extrace elf file
 eg ./bin/dwarfparser yourProgeam ./name.xml
@@ -22,6 +22,11 @@ eg ./bin/dwarfparser yourProgeam ./name.xml
 ./demo/example1 is a little demo project
 cd ./demo/example1 and make
 use the extact tool extract
-./bin/dwarfparser ./demo/example1/reflect_test ./demo/example1/contest.xml
+./bin/dwarfparser ./demo/example1/reflect_test ./demo/example1/context.xml
 and that all
 now you can run the demo by ./reflect_test
+
+to get the meta data we must compile the program in debug mode,
+we use argument -g in g++
+after extract the pragram and save the data in .xml
+you can recompile your program in release mode.

@@ -154,9 +154,9 @@ class List {
 			curson = head_[--level];
 		}
 		while(comp_.greater(curson->next->data,item)) {
-			curson = head_[--level];
 			if(level == 0)
 				return NULL;
+			curson = head_[--level];
 		}
 
 		curson = curson->next;

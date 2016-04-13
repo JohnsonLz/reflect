@@ -8,7 +8,7 @@ INC_DIR := /home/lz/Workplace/debug/reflection/lib
 OBJ_DIR	:= $(PROJECT_DIR)/obj
 
 #Compiler paraments
-CPPFLAGS := -std=c++11 -fPIC -g  -I$(PROJECT_DIR) -I$(INC_DIR)/libreflect/include  -I$(INC_DIR)/libtinyxml/include
+CPPFLAGS := -std=c++11 -fPIC  -I$(PROJECT_DIR) -I$(INC_DIR)/libreflect/include  -I$(INC_DIR)/libtinyxml/include
 #LDFLAG := -L$(LIB_DIR) -ljson -static
 LDFLAG := -L$(LIB_DIR)/libreflect/lib -lreflect -Wl,-rpath=$(LIB_DIR)/libreflect/lib -L$(LIB_DIR)/libtinyxml/lib -ltinyxml -Wl,-rpath=$(LIB_DIR)/libtinyxml/lib 
 #Sources and objs
@@ -65,5 +65,6 @@ sinclude $(SOURCES:.cc=.d)
 clean:
 
 	rm -r $(OBJ_DIR)
-
+	rm ./reflect_test
+	rm -f $(SOURCES:.cc=.d)	
 #File end

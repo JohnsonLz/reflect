@@ -70,6 +70,7 @@ clean:
 	rm ./lib/libreflect/include/context/container.h
 	rm ./lib/libreflect/include/context/alloc.h
 	rm -r $(OBJ_DIR)
+	rm -f $(SOURCES:.cc=.d)	
 
 install:
 	mv ./obj/dwarfparser ./bin/dwarfparser
